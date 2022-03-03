@@ -1,2 +1,6 @@
 # WBIB-Google
-A Google Search formatter for WBIB, because searching anything in Google breaks it, sigh.
+A cross-website formatter for WBIB, because redirects break it, sigh.
+
+# CURRENTLY INCLUDES
+- Google
+- Reddit

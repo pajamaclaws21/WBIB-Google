@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-  <title>Google Formatter</title>
+  <title>WBIB Formatter</title>
   <link rel="icon" href="/crossingfav.ico" type="image/x-icon">
-<body>
-
+<body style="font-family: Arial;">
+  <h1>Google Search Formatter</h1>
   <label for="fname">Search term: </label>
   <input type="text" id="sterm" name="sterm">
   <button id="submit" onclick="generateSearch()">Generate</button>
@@ -16,6 +16,28 @@ var termold = document.getElementById("sterm").value
 var termnew = encodeURI(termold)
 var result = 'google.com/search?q=' + termnew
 document.getElementById("link").innerHTML = result
+}
+</script>
+
+  <hr>
+  <h1>General Website Formatter</h1>
+<label for="webfrom">Website gotten from (ie, https://reddit.com): </label>
+<input type=text id=webfrom></input><br>
+
+<label for="linker">Link copied (begins with pajamaclaws21): </label>
+<input type=text id=linker></input>
+<button onclick="splittheLink()">Fix link</button>
+
+<p>Your fixed link is:</p>
+<p id="fixedlink"></p>
+
+<script>
+function splittheLink() {
+var linktext = document.getElementById("linker").value;
+var webtext = document.getElementById("webfrom").value;
+var splitlink = linktext.split("pajamaclaws21.github.io");
+var resultlink = webtext + splitlink[1]
+document.getElementById("fixedlink").innerHTML = resultlink; 
 }
 </script>
 

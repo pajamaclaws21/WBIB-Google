@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <title>Google Formatter</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+<body>
+
+  <label for="fname">Search term: </label>
+  <input type="text" id="sterm" name="sterm">
+  <button id="submit" onclick="generateSearch()">Generate</button>
+
+<p>Your link is as follows: </p><p id="link"></p>
+
+<script>
+function generateSearch() {
+var termold = document.getElementById("sterm").value
+var termnew = encodeURI(termold)
+var result = 'google.com/search?q=' + termnew
+document.getElementById("link").innerHTML = result
+}
+</script>
+
+</body>
+</html>

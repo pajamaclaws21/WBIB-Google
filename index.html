@@ -10,27 +10,12 @@
 
 <p>Your link is as follows: </p><p id="link"></p>
   
-  <hr>
-
-<label for="rname">Subreddit name: </label>
-<input type="text" id="rname" name="rname">
-<button id="submit" onclick="generateSubReddit()">Generate</button>
-
-<p>Your link is as follows: </p><p id="subreddit"></p>
-<p>To show comments, append /comments to the end.</p>
-
 <script>
 function generateSearch() {
 var termold = document.getElementById("sterm").value
 var termnew = encodeURI(termold)
 var result = 'google.com/search?q=' + termnew
 document.getElementById("link").innerHTML = result
-}
-function generateSubReddit() {
-var termold = document.getElementById("rname").value
-var termnew = encodeURI(termold)
-var result = 'reddit.com/r/' + termnew
-document.getElementById("subreddit").innerHTML = result
 }
 </script>
 
